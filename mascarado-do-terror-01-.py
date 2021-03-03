@@ -13,28 +13,28 @@ restart_s = ""
 teste = "R"
 def restart():
     linha()
-    print("Reiniciando aplicação, Por favor aguarde.....\n")
+    print("Estamos fechando o jogo atual......\n")
     restart_in=input("Aperte - R - para reiniciar  :").upper()
     linha()
 ()
 def vitoria():
     linha()
-    print("Parabéns! Você Ganhou o Jogo, deseja começar uma nova rodada?\n"
-          ". Digite NÃO para Sair\n" 
+    print("Parabéns! Você foi um otimo detetive! Será que você e capaz de encontrar novas pistas em locais diferentes?, que tal começar uma nova rodada?\n"
+          ". Digite NAO para Sair\n" 
           "ou Digite R para reiniciar\n") 
     linha()
     entrada_vitoria=input("Digite: ").upper()
     if entrada_vitoria == vitoria_s :
         linha()
         linha()
-        print("Fim de Jogo. Esperamos que tenha se divertido\n. "
-        "Versão 0.1 : Historia,Enredo e Produção do game por Jefferson Felix")
+        print("Fim de Jogo. Esperamos que você tenha se divertido\n. "
+        "Versão 0.1 : Historia,Enredo e desenvolvimento do game por Jefferson Felix")
         linha()
         linha()         
 ()
 def reiniciar():
     linha()
-    print("Ops! Você não foi capaz de descobrir o Culpado. Quer reiniciar o jogo?\n"
+    print("Infelizmente! Você não foi capaz de descobrir o culpado. que tal reiniciar o jogo e tentar novamente?\n"
           "Digite R para reiniciar ou Não para Sair") 
     linha()
     entrada_reiniciar=input("Digite: ")
@@ -42,8 +42,8 @@ def reiniciar():
         print("Fechando o Jogo. Esperamos que tenha se divertido\n. "
         "Versão 0.1 : Historia,Enredo e Produção do game por Jefferson Felix")
     else:
-        print("Aguarde! Estamos reiniciando a aplicação.....\n"
-              "Voltando ao inicio do game. Aperte Enter")
+        print("Aguarde! Estamos reiniciando o game.....\n"
+              "Digite R para reiniciar")
 ()
 def linha ():
     print("-"*80)
@@ -53,9 +53,10 @@ def inicio ():
     print("-"*80)
     print ("   Diante de uma pequena Cidade do Brasil, mas conhecida por Sergipe \n"
     "   acontecia diversos casos diariamente de homicidios e crimes\n" 
-    "   nada igual ao que estava preste acontecer...\n" 
-    "   pessoas mascaradas estavam ampliando os homicidios na cidade,\n"
-    "   será que você e capaz de descobrir os responsaveis pelos crimes !")
+    "   mas nada igual ao que estava preste acontecer...\n" 
+    "   pessoas mascaradas estavam ampliando os homicidios na cidade.\n"
+    "   era questão de tempo para a cidade ser dominadas por eles\n"
+    "   será que você e capaz de descobrir os responsaveis pelos crimes, antes que aconteça o pior? ")
     print("-"*80)
 ()   
 def personagem ():
@@ -65,7 +66,8 @@ def personagem ():
     f"{personagem_c}\n")
 ()
 def escolha_o_local ():
-    print ("Você tem três locais de crimes para verificar.\n"
+    print ("Que legal! 3 informações de crimes ao mesmo tempo\n"
+           "Onde devo verificar primeiro ?\n"
        f"{local_a} - {local_b}  - {local_c}  ")
 ()
 def praca():
@@ -88,7 +90,7 @@ def praca():
             linha()
             print ("você prosseguiu até la com a policia e\n" 
             "viram que se tratava apenas de um galpão comum.\n"
-            "Perdeu apenas o seu tempo e eles sumiram")
+            "perdeu apenas o seu tempo e os verdadeiros culpados foram a outro local.")
             linha()
             reiniciar()
 
@@ -107,7 +109,7 @@ def praca():
         historia1_entrada2 = input("Digite: ").lower()
         if historia1_entrada2 == historia1_escolha2 :
             linha()
-            print ("legal, Prisão efetuadas e as pessoas eram o mascarados do terror. ")
+            print ("Uhuum, Prisão efetuadas. conseguimos desarticulhar a quadrilha dos Mascarados do Terror ")
             linha()
             vitoria()
         else:
@@ -195,7 +197,7 @@ def hospital():
     if hospital_1_entrada == hospital_2_saida:
 
         linha()
-        print ("​- Deseja procurar diante o ultimo corpo?\n")
+        print ("​- Deseja procurar evidencias diante a ultima vitima dos mascarados ?\n")
         linha()
         historia2_escolha2 = "sim"
         historia2_entrada2 = input("Digite: ").lower()
@@ -223,10 +225,10 @@ while (teste):
     if personagem_entrada == personagem_a :
 
         linha()
-        print("Você escolheu Elisabeth, 38 anos de idade. Ela é conhecida pelos seus truques medicos e por seu palpites corretos. \n")
+        print("Você escolheu: Elisabeth, 35 anos de idade. Ela é conhecida pelos seus truques medicos e por seu palpites corretos. \n")
         linha()
         escolha_o_local()
-        onde= input("Onde Deseja ir ? ").upper()
+        onde= input("Onde deseja ir ? :").upper()
         linha()
 
         if onde == local_a:
@@ -241,7 +243,7 @@ while (teste):
         print("Você escolheu Fernando, 21 anos de idade. Novo nas investigações, mais cheio de coragem.  \n")
         linha()
         escolha_o_local()
-        onde = input("Onde Deseja ir ? ").upper()
+        onde = input("Onde deseja ir ? :").upper()
         linha()
 
         if onde == local_a:
@@ -254,7 +256,7 @@ while (teste):
     if personagem_entrada == personagem_c :
 
         linha()
-        print("Você escolheu Henrique, 29 anos de idade. Investigador: que vive no mundo das teorias. \n")
+        print("Você escolheu Henrique, 25 anos de idade. Investigador: Experiente! só que ainda tem muito a aprender \n")
         escolha_o_local()
         linha()
         onde = input("Onde deseja ir ? :").upper()
@@ -269,8 +271,8 @@ while (teste):
     if personagem_entrada:
         
         idade= input("Digite sua idade:")
-        faz = input("Quais são as habilidades do seu\n" 
-                    "jogador? :")
+        faz = input("Quais são as Habilidades do seu\n" 
+                    "Jogador? :")
         linha()
         print(f"Você escolheu {personagem_entrada}, {idade} anos de idade. Investigador: {faz}.\n")
         escolha_o_local()
@@ -287,9 +289,10 @@ while (teste):
     else:
         linha()
         linha()
-        print ("Pedimos desculpas iremos trabalhar para corrigir na proxima atualizações  \n"
-        "ou verifique se\n"
-        "Você digitou alguma informação errada ou ainda não escolheu um personagem\n"
-        "Lembre-se, de digitar conforme apresentado no texto")
+        print ("Olá, alguns erros podem ter acontecido !\n"
+        "Verifique se as informações digitadas, são as mesmas que e pedida no texto!\n"
+        "Caso contrario, reinicie a aplicação e teste novamente. !\n"
+        "Lembre-se estamos trabalhando em cima da aplicação para a melhoria!\n"
+        "se foi algum erro com o codigo, fique tranquilo. em breve será corrigido !\n")
         linha()
         linha()
