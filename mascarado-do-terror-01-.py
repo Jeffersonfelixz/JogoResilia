@@ -8,9 +8,7 @@ local_c = "HOSPITAL"
 vitoria_s = "NAO"
 reiniciar_s = "NAO"
 parar = "NAO"
-restart_s = ""
-#variaveis teste
-teste = "R"
+Reinicia_r = "R"
 def restart():
     linha()
     print("Estamos fechando o jogo atual......\n")
@@ -19,7 +17,9 @@ def restart():
 ()
 def vitoria():
     linha()
-    print("Parabéns! Você foi um otimo detetive! Será que você e capaz de encontrar novas pistas em locais diferentes?, que tal começar uma nova rodada?\n"
+    print("Parabéns! Você foi um otimo detetive!\n"
+          "Será que você e capaz de encontrar novas pistas em locais diferentes?\n"
+          "que tal começar uma nova rodada?\n"
           ". Digite NAO para Sair\n" 
           "ou Digite R para reiniciar\n") 
     linha()
@@ -34,7 +34,8 @@ def vitoria():
 ()
 def reiniciar():
     linha()
-    print("Infelizmente! Você não foi capaz de descobrir o culpado. que tal reiniciar o jogo e tentar novamente?\n"
+    print("Infelizmente! Você não foi capaz de descobrir o culpado\n"
+          "que tal reiniciar o jogo e tentar novamente?\n"
           "Digite R para reiniciar ou Não para Sair") 
     linha()
     entrada_reiniciar=input("Digite: ")
@@ -61,16 +62,31 @@ def inicio ():
 ()   
 def personagem ():
     print(f"Escolha o seu personagem a seguir.\n"
-    f"{personagem_a}\n"
+    " \n"
+    f"{personagem_a}\n" 
     f"{personagem_b}\n" 
     f"{personagem_c}\n")
 ()
 def escolha_o_local ():
-    print ("Que legal! 3 informações de crimes ao mesmo tempo\n"
+    print("A Praça e um bom lugar para sentar e refletir, mas também ultimamente tem sido bem perigoso")
+    linha()
+    print(" A Escola o melhor lugar para se aprender algumas coisas\n"
+          "mais lembrando da epoca de escola sempre tinha os alunos maldosos.")
+    linha()
+    print("Hospital? O'que há demais em um hospital?, ultimamante as vitimas tinha alguma relação familiar.")
+    linha()
+
+    print ("Alias que Terrivel! 3 informações de possiveis crimes ao mesmo tempo\n"
            "Onde devo verificar primeiro ?\n"
        f"{local_a} - {local_b}  - {local_c}  ")
 ()
 def praca():
+    print("Interrogar pessoa deve me trazer informações importantes,\n"
+          "mas também deve afastar o culpado, caso a informação esteja errado..")
+    linha()
+    print("Aguardar com a policia e uma ideia brilhante, mais será mesmo que não e perca de tempo?\n"
+          "e eles devem ter outros problemas para resolver")
+    linha()
     print("Você prefere - INTERROGAR pessoas procurando o culpado\n" " ou \n" 
            "aguarda até a noite escondido com a policia?\n"
            "INTERROGAR? ou ESPERAR?")
@@ -81,7 +97,7 @@ def praca():
         linha()
         print ("​- Você interrogou pessoas procurando o culpado\n" 
         "Você Interrogou Pedro\n" 
-        "Obteve a informação que os culpados estava em um galpão\n"
+        "Obteve a informação que os culpados estava em um galpão na zona sul\n"
         "ir até lá? Sim ou Não? ")
         linha()
         historia1 = "sim"
@@ -118,7 +134,8 @@ def praca():
             linha() 
 () 
 def escola():
-
+    print("a diretoria e conhecida por manter arquivos confidencias e lá que fica as cameras de segurança.")
+    print("a zeladoria e apenas onde e guardada as coisas da escola, alias um otimo lugar para se esconder.")
     print("Estou na escola: devo procurar na Diretoria ou na Sala do Zelador\n"
          "Diretoria? ou Zelador?")
     escola_1_saida = "diretoria"
@@ -135,7 +152,7 @@ def escola():
 
         if historia2_entrada1 == historia2 :
             linha()
-            print ("Poxa, Você foi descoberto pelos Mascarados\n"
+            print ("Poxa, era tudo uma armadilha, Você foi descoberto pelos Mascarados\n"
                    "e foi capturado")
             linha()
             reiniciar()
@@ -147,9 +164,9 @@ def escola():
     if escola_1_entrada == escola_2_saida:
 
         linha()
-        print ("​- Procurei na sala do Zelador, foi descoberto\n"
+        print ("​- Procurei na sala do Zelador, foi descoberto pistas importante e\n"
            "o possivel local de reunião dos Mascarados\n" 
-           "preparar a emboscada? Sim ou Não? ")
+           "devo Preparar a emboscada? Sim ou Não? ")
         linha()
         historia2_escolha2 = "sim"
         historia2_escolha3 = "nao"
@@ -157,7 +174,7 @@ def escola():
 
         if historia2_entrada2 == historia2_escolha2 :
             linha()
-            print ("Você preparou a emboscada e conseguiu, desarticular a quadrilha .")
+            print ("Você preparou a emboscada e conseguiu, desarticular a quadrilha, alias você e um otimo detetive.")
             linha()
             vitoria()
 
@@ -167,6 +184,10 @@ def escola():
             linha()        
 ()
 def hospital():
+    linha ()
+    print ("Elena tem sido muito importante para mim e uma pessoa que devo confiar.")
+    linha ()
+    print("alias vi o corpo do ultimo cidadão morto indo para a sala do medico, deveria ir confirmar se tem alguma prova.")
     print("Estou no Hospital, devo interrogar a enfermeira elena ou procurar\n" 
             "na sala do medico\n"
             "Elena ou Medico")
@@ -214,85 +235,91 @@ def hospital():
             restart()
             linha()
 ()
-while (teste):
-
+while (Reinicia_r):
     inicio ()
-    personagem ()
-
-    personagem_entrada = input("Escolha um personagem\n"
-    "ou digite o crie o nome do seu personagem:  ").upper()
-
-    if personagem_entrada == personagem_a :
-
+    print("O Jogo e recomendado para maiores de 14 anos, podem conter linguagens inapropriadas ")
+    idade_verificação = int(input("Digite sua idade para verificarmos  :"))
+    if (idade_verificação < 14):
         linha()
-        print("Você escolheu: Elisabeth, 35 anos de idade. Ela é conhecida pelos seus truques medicos e por seu palpites corretos. \n")
+        print(f"Você ainda não pode jogar esté jogo. esperamos que em breve você possa testar, mais ainda falta {14 - idade_verificação} anos.")
         linha()
-        escolha_o_local()
-        onde= input("Onde deseja ir ? :").upper()
-        linha()
-
-        if onde == local_a:
-            escola()
-        if onde == local_b:
-            praca()
-        if onde == local_c: 
-            hospital()
-    if personagem_entrada == personagem_b :
-
-        linha()
-        print("Você escolheu Fernando, 21 anos de idade. Novo nas investigações, mais cheio de coragem.  \n")
-        linha()
-        escolha_o_local()
-        onde = input("Onde deseja ir ? :").upper()
-        linha()
-
-        if onde == local_a:
-            escola()
-        if onde == local_b:
-            praca()
-        if onde == local_c: 
-            hospital() 
-        
-    if personagem_entrada == personagem_c :
-
-        linha()
-        print("Você escolheu Henrique, 25 anos de idade. Investigador: Experiente! só que ainda tem muito a aprender \n")
-        escolha_o_local()
-        linha()
-        onde = input("Onde deseja ir ? :").upper()
-        
-        if onde == local_a:
-            escola()
-        if onde == local_b:
-            praca()
-        if onde == local_c: 
-            hospital()
-
-    if personagem_entrada:
-        
-        idade= input("Digite sua idade:")
-        faz = input("Quais são as Habilidades do seu\n" 
-                    "Jogador? :")
-        linha()
-        print(f"Você escolheu {personagem_entrada}, {idade} anos de idade. Investigador: {faz}.\n")
-        escolha_o_local()
-        linha()
-        onde = input("Onde deseja ir ? :").upper()
-        
-        if onde == local_a:
-            escola()
-        if onde == local_b:
-            praca()
-        if onde == local_c: 
-            hospital()
-
     else:
-        linha()
-        linha()
-        print ("Olá, alguns erros podem ter acontecido !\n"
-        "Verifique se as informações digitadas, são as mesmas que e pedida no texto!\n"
-        "Caso contrario, reinicie a aplicação e teste novamente. !\n"
-        "Lembre-se estamos trabalhando em cima da aplicação para a melhoria!\n"
-        "se foi algum erro com o codigo, fique tranquilo. em breve será corrigido !\n")
-        linha()
-        linha()
+        personagem ()
+        personagem_entrada = input("Escolha um personagem acima\n"
+                                    "ou\n" 
+                                    "Crie um novo Personagem, Digitando o nome:  ").upper()
+
+        if personagem_entrada == personagem_a:
+
+            linha()
+            print("Você escolheu: Elisabeth, 35 anos de idade. Ela é conhecida pelos seus truques medicos e por seu palpites corretos. \n")
+            linha()
+            escolha_o_local()
+            onde= input("Onde deseja ir ? :").upper()
+            linha()
+
+            if onde == local_a:
+                escola()
+            if onde == local_b:
+                praca()
+            if onde == local_c: 
+                hospital()
+        if personagem_entrada == personagem_b :
+
+            linha()
+            print("Você escolheu Fernando, 21 anos de idade. Novo nas investigações, mais cheio de coragem.  \n")
+            linha()
+            escolha_o_local()
+            onde = input("Onde deseja ir ? :").upper()
+            linha()
+
+            if onde == local_a:
+                escola()
+            if onde == local_b:
+                praca()
+            if onde == local_c: 
+                hospital() 
+            
+        if personagem_entrada == personagem_c :
+
+            linha()
+            print("Você escolheu Henrique, 25 anos de idade. Investigador: Experiente! só que ainda tem muito a aprender \n")
+            escolha_o_local()
+            linha()
+            onde = input("Onde deseja ir ? :").upper()
+            
+            if onde == local_a:
+                escola()
+            if onde == local_b:
+                praca()
+            if onde == local_c: 
+                hospital()
+
+        if personagem_entrada:
+            
+            idade= input("Digite sua idade:")
+            faz = input("Quais são as Habilidades do seu\n" 
+                        "Jogador? :")
+            linha()
+            print(f"Você escolheu {personagem_entrada}, {idade} anos de idade. Investigador: {faz}.\n")
+            escolha_o_local()
+            linha()
+            onde = input("Onde deseja ir ? :").upper()
+            
+            if onde == local_a:
+                escola()
+            if onde == local_b:
+                praca()
+            if onde == local_c: 
+                hospital()
+
+        else:
+            linha()
+            linha()
+            print ("Olá, alguns erros podem ter acontecido !\n"
+            "Verifique se as informações digitadas, são as mesmas que e pedida no texto!\n"
+            "Caso contrario, reinicie a aplicação e teste novamente. !\n"
+            "Lembre-se estamos trabalhando em cima da aplicação para a melhoria!\n"
+            "se foi algum erro com o codigo, fique tranquilo. em breve será corrigido !\n")
+            linha()
+            linha()
