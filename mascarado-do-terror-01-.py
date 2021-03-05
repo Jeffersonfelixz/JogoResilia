@@ -17,7 +17,10 @@ def restart():
 ()
 def vitoria():
     linha()
-    print("Parabéns! Você foi um otimo detetive!\n"
+    print("┬  ┬┬┌┬┐┌─┐┬─┐┬┌─┐\n"
+          "└┐┌┘│ │ │ │├┬┘│├─┤\n"
+           "└┘ ┴ ┴ └─┘┴└─┴┴ ┴")
+    print("Parabéns! devo parabenizar você pelo otimo trabalho, mais devemos continuar você não acha?\n"
           "Será que você e capaz de encontrar novas pistas em locais diferentes?\n"
           "que tal começar uma nova rodada?\n"
           ". Digite NAO para Sair\n" 
@@ -51,12 +54,12 @@ def linha ():
     print("-"*80)
 ()
 def inicio ():
-    print(" _____ _____   ___  ___   ______ ________  ___  _   _ _____ _   _______ _____\n" 
-"/  ___|  ___| |_  |/ _ \  | ___ \  ___|  \/  | | | | |_   _| \ | |  _  \  _  |\n"
-"\ `--.| |__     | / /_\ \ | |_/ / |__ | .  . | | | | | | | |  \| | | | | | | |\n"
-"`--. \  __|    | |  _  | | ___ \  __|| |\/| | | | | | | | | . ` | | | | | | |\n"
-"/\__/ / |___/\__/ / | | | | |_/ / |___| |  | | \ \_/ /_| |_| |\  | |/ /\ \_/ /\n"
-"\____/\____/\____/\_| |_/ \____/\____/\_|  |_/  \___/ \___/\_| \_/___/  \___/\n" 
+    print(" _____ _____    ___  ___   ______ ____   __  ___  _   _ _____ _   _______ _____\n" 
+"/  ___|  ___| |_  |/ _ \    | ___ \  ___|  \/  |   | | | |_   _| \ | |  _  \  _  |\n"
+"\ `--.| |__     | / /_\ \   | |_/ / |__ | .  . |   | | | | | | |  \| | | | | | | |\n"
+"`--. \  __|    | |  _  |    | ___ \  __|| |\/| |   | | | | | | | . ` | | | | | | |\n"
+"/\__/ / |___/\__/ / | | |   | |_/ / |___| |  | |   \ \_/ /_| |_| |\  | |/ /\ \_/ /\n"
+"\____/\____/\____/\_| |_/   \____/\____/\_|  |_/    \___/ \___/\_| \_/___/  \___/\n" 
 "                                                                                 \n"
 "                                                                                 \n"
 "                                                  _                      _       \n"
@@ -88,12 +91,12 @@ def personagem ():
     f"{personagem_c}\n")
 ()
 def escolha_o_local ():
-    print("A Praça e um bom lugar para sentar e refletir, mas também ultimamente tem sido bem perigoso")
+    print("A Praça e um bom lugar para sentar e refletir, mas também ultimamente tem sido bem perigoso esses dias.")
     linha()
-    print(" A Escola o melhor lugar para se aprender algumas coisas\n"
-          "mais lembrando da epoca de escola sempre tinha os alunos maldosos.")
+    print(" A Escola e o melhor lugar para se aprender alguma coisa\n"
+          "mais pensando bem a epoca de escola sempre tinha os alunos maldosos.")
     linha()
-    print("Hospital? O'que há demais em um hospital?, ultimamante as vitimas tinha alguma relação familiar.")
+    print("Hospital? O'que há demais em um hospital?, mais ultimamante as vitimas tinha alguma relação familiar.")
     linha()
 
     print ("Alias que Terrivel! 3 informações de possiveis crimes ao mesmo tempo\n"
